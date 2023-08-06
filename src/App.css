@@ -26,6 +26,17 @@ body {
 	background-color: white;
 	border: 2px solid rgb(255, 0, 0);
 }
+
+/*
+==================
+Navbar
+==================
+*/
+.sandwich-icon {
+	display: none; /* Hide the sandwich icon by default */
+	font-size: 1.8em;
+	cursor: pointer;
+}
 nav {
 	display: flex;
 	background-color: black;
@@ -61,6 +72,7 @@ nav a {
 	color: black;
 	font-weight: bold;
 }
+
 /*
 ==============================================
 Hero Section
@@ -141,16 +153,17 @@ About Section
 /* Media Queries */
 @media screen and (max-width: 768px) {
 	.main-logo {
-		font-size: 2em;
+		font-size: 1.3em;
+		margin-right: auto;
 	}
 
 	.list-item {
-		font-size: 0.8em;
+		font-size: 0.7em;
 		margin-right: 1em;
 	}
 
 	.hero-section {
-		font-size: 2.5em;
+		font-size: 2.7em;
 		max-width: 100%;
 		margin: 1em;
 	}
