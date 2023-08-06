@@ -4,9 +4,8 @@
 }
 body {
 	background-color: black;
-}
-h1 {
 	margin: 0;
+	font-family: "Poppins", sans-serif;
 }
 
 .main-logo {
@@ -14,53 +13,53 @@ h1 {
 	margin-right: auto;
 	font-size: 30px;
 }
-.left {
+
+.left,
+.right {
 	font-family: "Playfair Display", serif;
 	border: 2px solid white;
 	padding: 5px;
 }
+
 .right {
-	font-family: "Playfair Display", serif;
 	color: black;
 	background-color: white;
-	padding: 5px;
-	border: 2px solid rgb(253, 0, 0);
+	border: 2px solid rgb(255, 0, 0);
 }
 nav {
 	display: flex;
-	max-width: 100%;
 	background-color: black;
 	color: white;
-	padding: 35px;
+	padding: 1em;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1em;
 }
 .list {
 	margin: 0;
+	padding: 0;
 	list-style-type: none;
 	display: flex;
 	align-items: center;
 }
+
 nav a {
 	text-decoration: none;
+	color: white;
 }
 
 .list-item {
 	color: white;
-	width: 100px;
-	margin-right: 40px;
-	text-align: center;
-	padding: 7px;
-	font-family: "Poppins", sans-serif;
+	margin-right: 1.5em;
+	padding: 0.5em 1em;
 	border: 2px solid white;
-}
-
-.list-item:active {
-	font-weight: 500;
+	transition: background-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
 }
 
 .list-item:hover {
 	background-color: white;
 	color: black;
-	font-weight: bolder;
+	font-weight: bold;
 }
 /*
 ==============================================
@@ -70,7 +69,10 @@ Hero Section
 
 .home-container {
 	background-image: url("./image1.jpg");
+	background-size: cover;
+	background-position: center;
 }
+
 .hero-section {
 	font-size: 4.4em;
 	max-width: 600px;
@@ -110,7 +112,7 @@ About Section
 .about-content {
 	display: flex;
 	flex-wrap: wrap;
-	margin-bottom: 50px;
+	margin-bottom: 1em;
 }
 
 .sub-content {
@@ -133,5 +135,37 @@ About Section
 	width: 50%;
 	text-align: center;
 	margin: auto;
-	font-size: 4em;
+	font-size: 3em;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+	.main-logo {
+		font-size: 2em;
+	}
+
+	.list-item {
+		font-size: 0.8em;
+		margin-right: 1em;
+	}
+
+	.hero-section {
+		font-size: 2.5em;
+		max-width: 100%;
+		margin: 1em;
+	}
+
+	.about-title {
+		font-size: 2em;
+	}
+
+	.sub-content {
+		margin: 1em;
+		font-size: 1em;
+	}
+
+	.hero-footer {
+		font-size: 2em;
+		width: 80%;
+	}
 }
